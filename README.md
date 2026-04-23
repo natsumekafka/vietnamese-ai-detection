@@ -46,7 +46,6 @@ Fine-tuning PhoBERT and mDeBERTa to classify AI-generated vs human-written Vietn
 - Model learns Gemini 2.5 Flash patterns, does not generalize well to other LLM families
 - Larger models (Pro) generate harder-to-detect text than smaller models (Flash, Fast)
 - Emotional topics are harder to detect than academic/ethical topics
-- mDeBERTa has higher AUROC but lower F1 than PhoBERT
 
 ## Future Work
 - Add training data from GPT, Claude, Llama for better generalization
