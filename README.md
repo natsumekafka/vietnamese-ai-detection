@@ -37,15 +37,20 @@ Fine-tuning PhoBERT and mDeBERTa to classify AI-generated vs human-written Vietn
 |-----------|----------|
 | Gemini 2.5 Flash (in-distribution) | ~100% |
 | Gemini 3 Fast | 80% |
-| Gemini 3.1 Pro | 40-50% |
-| ChatGPT | 0% |
+| Gemini 3.1 Pro | 60% |
+| ChatGPT Basic | 10% |
 
-> Model thực chất là **Gemini 2.5 Flash detector** — generalizes kém với các LLM khác do giới hạn của dataset.
+> Model is essentially a **Gemini 2.5 Flash detector** — poor generalization to other LLMs due to dataset limitations.
 
 ## Key Findings
-- Model học pattern của Gemini 2.5 Flash, không generalize tốt sang LLM khác họ
-- Model lớn hơn (Pro) tạo văn bản khó detect hơn model nhỏ (Flash, Fast)
+- Model learns Gemini 2.5 Flash patterns, does not generalize well to other LLM families
+- Larger models (Pro) generate harder-to-detect text than smaller models (Flash, Fast)
+- Emotional topics are harder to detect than academic/ethical topics
+- mDeBERTa has higher AUROC but lower F1 than PhoBERT
 
 ## Future Work
-- Thêm data từ GPT, Claude, Llama để model generalize tốt hơn
-- Cập nhật dataset theo từng thế hệ LLM mới
+- Add training data from GPT, Claude, Llama for better generalization
+- Update dataset continuously as new LLM generations emerge
+- Explore watermarking-based detection as complement to stylistic analysis
+- Apply Temperature Scaling calibration to reduce overconfident predictions
+- Investigate topic-dependent detection bias
