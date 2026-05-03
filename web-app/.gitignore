@@ -1,0 +1,33 @@
+# Environments
+backend/venv/
+frontend/node_modules/
+.env
+*.env
+
+# Python Caches
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+*.so
+
+# Models
+backend/model/
+
+# Frontend Build
+frontend/dist/
+frontend/.vite/
+frontend/dist-ssr/
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

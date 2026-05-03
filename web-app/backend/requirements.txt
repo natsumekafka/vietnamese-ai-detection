@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+transformers
+torch
+underthesea
+safetensors
+pydantic
+pytest
+httpx
